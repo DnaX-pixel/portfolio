@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+}
+
+@layer base {
+  * {
+    @apply border-slate-dark;
+  }
+  
+  body {
+    @apply bg-dark text-slate-light;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Account for fixed navbar */
+  }
+  
+  section[id] {
+    scroll-margin-top: 70px; /* Account for fixed navbar */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .section-padding {
+    @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-teal to-teal-dark bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-navy-light/50 backdrop-blur-sm border border-slate-dark/50;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020c1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #495670;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64ffda;
+}
+
