@@ -31,12 +31,12 @@ git init
 
 ```bash
 # Ganti YOUR_USERNAME dengan username GitHub anda
-git remote add origin https://github.com/YOUR_USERNAME/portfolio.git
+git remote add origin https://github.com/DnaX-pixel/portfolio
 ```
 
-**Atau jika guna SSH:**
+**Atau jika guna SSH (setelah setup SSH key):**
 ```bash
-git remote add origin git@github.com:YOUR_USERNAME/portfolio.git
+git remote add origin git@github.com:DnaX-pixel/portfolio.git
 ```
 
 ### 4. Check Status

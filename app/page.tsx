@@ -34,9 +34,6 @@ function Footer() {
           <p className="text-slate text-sm">
             © {currentYear} Muhammad Daniel Bin Rosley. All rights reserved.
           </p>
-          <p className="text-slate text-sm">
-            Built with Next.js, TypeScript, and Tailwind CSS
-          </p>
         </div>
       </div>
     </footer>
