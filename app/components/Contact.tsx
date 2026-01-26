@@ -63,7 +63,7 @@ export default function Contact() {
           <div className="space-y-6">
             <div>
               <p className="text-slate mb-6 leading-relaxed">
-                I'm always open to discussing new opportunities, network engineering projects, 
+                I&apos;m always open to discussing new opportunities, network engineering projects, 
                 or collaboration on web development and IoT solutions. Feel free to reach out!
               </p>
             </div>

@@ -45,11 +45,11 @@ export default function About() {
               What sets me apart is my unique combination of{" "}
               <span className="text-teal font-semibold">field-oriented network engineering</span> and{" "}
               <span className="text-teal font-semibold">web development</span> expertise. 
-              I've worked hands-on with carrier-grade network equipment in live environments, conducting 
+              I&apos;ve worked hands-on with carrier-grade network equipment in live environments, conducting 
               site surveys and deploying infrastructure across Sabah and Sarawak for Telekom Malaysia.
             </p>
             <p>
-              Simultaneously, I've developed web platforms like FreelanceForGood and IoT solutions 
+              Simultaneously, I&apos;ve developed web platforms like FreelanceForGood and IoT solutions 
               such as the Smart Charity Rack, demonstrating my ability to bridge the gap between 
               network infrastructure and software development.
             </p>
