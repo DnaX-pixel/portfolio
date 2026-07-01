@@ -235,6 +235,7 @@ export const certifications: Certification[] = [
     title: "CCNA – Introduction to Networks",
     organization: "Cisco",
     year: "2024",
+    pdf: "/documents/certifications/CCNA-Introduction-to-Networks.pdf",
   },
   {
     title: "CCNA – Routing and Switching Essentials",
@@ -273,7 +274,7 @@ export const education: Education[] = [
     degree: "Bachelor of Computer Science with Honours (Network Engineering)",
     institution: "Universiti Malaysia Sabah",
     period: "Oct 2022 - Current",
-    cgpa: "3.15",
+    cgpa: "3.20",
     achievements: [
       "Dean's List Award (1-2024/2025)",
       "Final Year Project: FreelanceForGood - Web Platform Connecting Freelancers with Charity Organizations",
