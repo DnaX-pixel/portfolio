@@ -237,6 +237,24 @@ export const certifications: Certification[] = [
     year: "2024",
   },
   {
+    title: "CCNA – Routing and Switching Essentials",
+    organization: "Cisco",
+    year: "2024",
+    pdf: "/documents/certifications/CCNA-Routing-Switching-Essentials.pdf",
+  },
+  {
+    title: "CCNA – Switching, Routing, and Wireless Essentials",
+    organization: "Cisco",
+    year: "2024",
+    pdf: "/documents/certifications/CCNA-Switching-Routing-Wireless-Essentials.pdf",
+  },
+  {
+    title: "CCNA – Enterprise Networking, Security, and Automation",
+    organization: "Cisco",
+    year: "2024",
+    pdf: "/documents/certifications/CCNA-Enterprise-Networking-Security-Automation.pdf",
+  },
+  {
     title: "HCIA-Cloud Computing",
     organization: "Huawei Enterprise",
     year: "2022",
