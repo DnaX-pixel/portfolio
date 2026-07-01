@@ -8,6 +8,11 @@ export interface Experience {
   images?: string[]; // Array of image paths for the slider
 }
 
+export interface ProjectLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   title: string;
   description: string;
@@ -17,6 +22,7 @@ export interface Project {
   year: string;
   github?: string;
   demo?: string;
+  links?: ProjectLink[];
   image?: string;
 }
 
@@ -142,6 +148,40 @@ export const projects: Project[] = [
     ],
     year: "2025",
     demo: "/documents/Final Report _ Design and Evaluation of a Network Monitoring Solution for a Small to Medium Enterprise (SME) Using PRTG. (1).pdf",
+  },
+  {
+    title: "GEMS Service Request (GSR) Form System",
+    description: "Internal Web System to Automate GSR Form Generation & Approval for TM",
+    longDescription: "A web-based internal system built for TM (Telekom Malaysia) to fully automate the creation and approval of GEMS Service Request (GSR) forms. The system eliminates repetitive manual form preparation by allowing requesters to fill in only the changing fields, while keeping the official fixed form layout intact. The completed GSR is auto-generated as a filled .docx Word document and exported as PDF – matching the exact TM template format. The system also handles the full internal approval chain from submission through PIC review and final GM decision.",
+    techStack: ["Laravel 13", "PHP 8.2", "MySQL", "Docker", "Blade", "Tailwind CSS", "PhpWord", "DomPDF"],
+    features: [
+      "Fully automated GSR form generation matching official TM template",
+      "Dynamic input fields – only changing values are captured",
+      "Auto-export to .docx (PhpWord) and PDF (DomPDF) with exact TM formatting",
+      "Complete approval workflow: Requester → PIC → GM",
+      "Structured relational database to store requests, fields, and approval status",
+      "Containerized deployment with Docker for consistent environments",
+    ],
+    year: "2026",
+    demo: "http://72.61.149.40:8084/login",
+  },
+  {
+    title: "Dashboard Monitor & Alert App",
+    description: "Automated Web Monitoring · OCR Change Detection · Smart Multi-Channel Alerts",
+    longDescription: "A fully automated daily reporting pipeline built for TM Network Division compliance monitoring. The system runs every morning via Windows Task Scheduler, downloads the latest project Excel file from a configured source, evaluates it against two deterministic ND compliance rules, and delivers results through three channels: SMTP email, WhatsApp via a local Baileys Node.js bridge, and Telegram. A separate Power BI OCR mode captures a live screenshot of the ND dashboard using Playwright, crops three compliance panels (Meet RFS, QC, GR), uses Tesseract OCR to extract NC counts from the image, and blasts each panel as a WhatsApp image with a compliance summary caption directly to the team group. A Telegram bot also allows team members to query the raw data with natural language questions using a lightweight scikit-learn intent router.",
+    techStack: ["Python", "pandas", "Ollama", "Playwright", "Node.js", "pytesseract", "Pillow", "scikit-learn", "openpyxl", "Baileys"],
+    features: [
+      "Scheduled daily execution via Windows Task Scheduler",
+      "Automated Excel ingestion and deterministic ND compliance rule evaluation",
+      "Multi-channel delivery: SMTP email, WhatsApp (Baileys), and Telegram",
+      "Live Power BI dashboard capture using Playwright",
+      "OCR-based NC count extraction with Tesseract + Pillow image cropping",
+      "Auto-generated WhatsApp image blasts with compliance summaries",
+      "Natural language data queries via Telegram bot with scikit-learn intent router",
+      "Local AI narrative generation with Ollama – no paid cloud APIs",
+    ],
+    year: "2025",
+    demo: "http://72.61.149.40/login",
   },
 ];
 

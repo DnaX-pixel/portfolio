@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Section from "./Section";
-import { projects } from "@/data/portfolio";
+import { projects, ProjectLink } from "@/data/portfolio";
 import { FaGithub, FaExternalLinkAlt, FaCalendarAlt } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
 
@@ -33,7 +33,7 @@ export default function Projects() {
                     <span>{project.year}</span>
                   </div>
                 </div>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   {project.github && (
                     <motion.a
                       href={project.github}
@@ -51,7 +51,6 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      download={project.demo.endsWith('.pdf') ? undefined : undefined}
                       className="flex items-center gap-2 text-slate hover:text-teal transition-colors text-sm"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -60,6 +59,20 @@ export default function Projects() {
                       <FaExternalLinkAlt size={16} />
                     </motion.a>
                   )}
+                  {project.links && project.links.map((link: ProjectLink, linkIndex: number) => (
+                    <motion.a
+                      key={linkIndex}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-3 py-1 border border-teal/40 text-teal rounded text-xs hover:bg-teal/10 transition-all"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaExternalLinkAlt size={11} />
+                      <span>{link.label}</span>
+                    </motion.a>
+                  ))}
                 </div>
               </div>
               <p className="text-slate-light font-medium mb-2">{project.description}</p>
